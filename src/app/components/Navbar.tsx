@@ -1,48 +1,51 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import images from "@/public/images/me.jpeg"
+import images from "@/public/images/me.jpeg";
+
 const Navbar = () => {
   return (
-    <header className=" text-red-800 bg-white body-font fixed w-full z-10">
-      <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
-      <Image
-  src={images}
-  alt="Profile Picture"
-  className="rounded-[50%] w-16 h-16 "
-/>
+    <header className="bg-white text-red-800 fixed w-full z-20">
+      <div className="container mx-auto flex flex-wrap p-4 items-center justify-between">
+        <div className="flex items-center">
+          <Image
+            src={images}
+            alt="Profile Picture"
+            className="rounded-full w-12 h-12 sm:w-16 sm:h-16"
+          />
+          <a className="text-red-700 font-semibold ml-3 text-lg sm:text-xl">
+            Huzaifa Naeem
+          </a>
+        </div>
 
-        <a className="flex title-font font-semibold items-center text-red-700 mb-4 md:mb-0 pl-3">
-          Huzaifa Naeem
-        </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nav className="mt-4 md:mt-0 flex flex-wrap items-center justify-center space-x-4 md:space-x-6">
           <Link
             href="/"
-            className="mr-5 hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-4 py-2 duration-200 "
+            className="font-semibold hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-3 py-2 text-sm sm:text-base duration-200"
           >
             Home
           </Link>
           <Link
             href="#Education"
-            className="mr-5 hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-4 py-2 duration-200 "
+            className="font-semibold hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-3 py-2 text-sm sm:text-base duration-200"
           >
             Education
           </Link>
           <Link
             href="#Skill"
-            className="mr-5 hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-4 py-2 duration-200 "
+            className="font-semibold hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-3 py-2 text-sm sm:text-base duration-200"
           >
             Skills
           </Link>
           <Link
             href="#Portfolio"
-            className="mr-5 hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-4 py-2 duration-200 "
+            className="font-semibold hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-3 py-2 text-sm sm:text-base duration-200"
           >
             Portfolio
           </Link>
           <Link
             href="#Contact"
-            className="mr-5 hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-4 py-2 duration-200 "
+            className="font-semibold hover:shadow-md hover:bg-red-900 rounded-xl hover:text-white px-3 py-2 text-sm sm:text-base duration-200"
           >
             Contact
           </Link>

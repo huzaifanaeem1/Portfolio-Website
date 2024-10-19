@@ -3,16 +3,16 @@ import Image from 'next/image'
 import Information from './components/Information'
 import Education from './components/Education'
 import Skill from './components/Skill'
+import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import Portfolio from './components/Portfolio'
 
 
 
 
 
 
-export default function page() {
+export default function Home() {
   return (
     <div>
       <Information />
