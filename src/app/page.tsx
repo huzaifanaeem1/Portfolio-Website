@@ -1,26 +1,11 @@
-import React from 'react'
-import Image from 'next/image'
-import Information from './components/Information'
-import Education from './components/Education'
-import Skill from './components/Skill'
-import Portfolio from './components/Portfolio'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-
-
-
-
-
+import { Contact, InfoSection, Skills } from "@/app/components/";
 
 export default function Home() {
   return (
-    <div>
-      <Information />
-      <Education />
-      <Skill />
-      <Portfolio />
+    <div className="">
+      <InfoSection />
+      <Skills />
       <Contact />
-      <Footer />
     </div>
-  )
+  );
 }

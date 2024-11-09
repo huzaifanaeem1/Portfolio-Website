@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Navbar from "@/app/components/Navbar";
+import { Heebo } from "next/font/google";
 import "./globals.css";
+import { Navbar, MobNavbar, Footer } from "@/app/components/";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const font = Heebo({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -25,14 +21,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${font.className} ${font.className} antialiased bg-black`}
       >
-         <Navbar />
+        <Navbar />
+        <MobNavbar />
         {children}
+        <Footer />
       </body>
-      
     </html>
   );
 }
